@@ -1,0 +1,7 @@
+# Arquivo de securança
+.env
+
+# banco de dados
+db.sqlite3
+# Pastas
+.venv/
