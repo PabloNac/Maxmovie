@@ -8,3 +8,5 @@ db.sqlite3
 
 # Configurações locais
 .vscode/
+
+*/__pycache__/
