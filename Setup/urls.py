@@ -6,7 +6,7 @@ from Usuarios.views import Tela_login, Tela_register
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("", home),
-    path("Login/", Tela_login),
-    path("Registrar-se/", Tela_register),
+    path("", home, name="home"),
+    path("Login/", Tela_login, name="Tela_Login"),
+    path("Registrar-se/", Tela_register, nome="Tela_Register"),
 ]
