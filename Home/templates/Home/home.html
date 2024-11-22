@@ -6,6 +6,35 @@
     <title>Maxmovie</title>
 </head>
 <body>
-    <h1>Maxmovie</h1>
+    <main>
+        <head>
+            <nav>
+                <div class="nav-div">
+                    <a class="Logo" href="{% url 'home' %}">Maxmovie</a>
+                    <div class="Div_Usuario">
+                        <button id="Login_Button" class="Button">
+                            Login
+                            <script>
+                                const Login_Button = document.getElementById("Login_Button");
+                                Login_Button.addEventListener("click", function(){
+                                    window.location.href = "{% url 'Tela_Login' %}"
+                                })
+                            </script>
+                        </button>
+                        
+                        <button id="Register_Button" class="Button">
+                            Registar-se
+                            <script>
+                                const Register_Button = document.getElementById("Register_Button");
+                                Register_Button.addEventListener("click", function(){
+                                    window.location.href = "{% url 'Tela_Register' %}"
+                                })
+                            </script>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+        </head>
+    </main>
 </body>
 </html>
