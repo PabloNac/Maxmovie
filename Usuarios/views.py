@@ -16,6 +16,11 @@ class Tela_Login(FormView):
     
 class Tela_Register(CreateView):
     model = Register
-    fields = ["Usuario", "Email", "Senha"]
+    form_class = Login_Form
+
     template_name = "Usuarios/Register.html"
     success_url = reverse_lazy("Tela_Login")
+    
+    def form_valid(self, form):
+        user = form.save()
+        return super().form_valid(form)
